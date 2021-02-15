@@ -5,7 +5,7 @@
         &nbsp;&nbsp;
         <input type="text" v-model="sex" placeholder="请输入性别"/>
         &nbsp;&nbsp;
-        <button @click="add" v-if="index === null">添加</button>  &nbsp;&nbsp;
+        <button @click="add" v-if="indexObj.index === null">添加</button>  &nbsp;&nbsp;
         <button @click="update"  v-else>更新</button>  &nbsp;&nbsp;
         <button @click="clear" >清空数组</button>  &nbsp;&nbsp;
 
@@ -26,53 +26,112 @@
 </template>
 
 <script>
+import { reactive,ref } from 'vue';
+//在vue3中 所有的变量定义在setup函数里面.
+// import {(ref,reactive)} from 'vue';
 export default {
     name:'todoList',
-    data(){
-        return{
-            list:[],
-            name:'',
-            sex:'',
-            index:null,
+    setup(){
+        let list = ref([]); //定义数组
+        let name = ref(""); //定义 name
+        let sex = ref('') //定义sex
+        let indexObj = reactive({index:null});//定义对象
+        const add = ()=>{
+            if(!name.value || !sex.value){
+                return;
+            }
+            list.value.push({
+                name:name.value,
+                sex:sex.value
+            });
+            name.value = "";
+            sex.value = "";
+        };
+        const edit = index=>{
+            let item = list.value[index];
+            name.value = item.name;
+            sex.value = item.sex;
+            indexObj.index = index;
+
+        };
+        const update = ()=>{
+            if(!name.value || !sex.value){
+                return;
+            }
+            list.value[indexObj.index].name = name.value;
+            list.value[indexObj.index].sex = sex.value;
+            sex.value = '';
+            name.value = '';
+            indexObj.index = null;
+        };
+        const del = (index)=>{
+            list.value.splice(index , 1);
+            indexObj.index = null;
+            name.value = '';
+            sex.value = '';
+        };
+        const clear = ()=>{
+            list.value.length = 0;
+        }
+        return {
+            list,
+            name,
+            sex,
+            indexObj,
+            add,
+            edit,
+            update,
+            del,
+            clear
         }
     },
-    methods:{
-        add(){
-            if(!this.name || !this.sex){
-                return;
-            }
-            this.list.push({
-                name:this.name,
-                sex:this.sex
-            });
-            this.name = "";
-            this.sex = "";
-        },
-        edit(index){
-            let item = this.list[index];
-            this.name = item.name;
-            this.sex = item.sex;
-            this.index = index;
-            console.log(index);
-        },
-        update(){
-            if(!this.name || !this.sex){
-                return;
-            }
-            this.list[this.index].name = this.name;
-            this.list[this.index].sex = this.sex;
-            this.sex = "";
-            this.name = "";
-            this.index = null;
-        },
-        del(index){
-            this.list.splice(index , 1);
-            console.log(index,'--del')
-        },
-        clear(){
-            this.list.length = 0
-        }
-    }
+    // data(){
+    //     return{
+    //         list:[],
+    //         name:'',
+    //         sex:'',
+    //         indexObj:{
+    //             index:null,
+    //         }
+    //     }
+    // },
+    // methods:{
+    //     add(){
+    //         if(!this.name || !this.sex){
+    //             return;
+    //         }
+    //         this.list.push({
+    //             name:this.name,
+    //             sex:this.sex
+    //         });
+    //         this.name = "";
+    //         this.sex = "";
+    //     },
+    //     edit(index){
+    //         let item = this.list[index];
+    //         this.name = item.name;
+    //         this.sex = item.sex;
+    //         this.index = index;
+    //         console.log(index);
+    //     },
+    //     update(){
+    //         if(!this.name || !this.sex){
+    //             return;
+    //         }
+    //         this.list[this.index].name = this.name;
+    //         this.list[this.index].sex = this.sex;
+    //         this.sex = "";
+    //         this.name = "";
+    //         this.index = null;
+    //     },
+    //     del(index){
+    //         this.list.splice(index , 1);
+    //         console.log(index,'--del')
+    //     },
+    //     clear(){
+    //         this.list.length = 0
+    //     }
+    // }
 }
 </script>
 <style lang="scss" scoped>

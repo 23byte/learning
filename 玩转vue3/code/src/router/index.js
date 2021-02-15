@@ -26,6 +26,24 @@ const routes = [{
         name: 'markRaw',
         component: () =>
             import ('../views/markRaw.vue')
+    },
+    {
+        path: '/counter',
+        name: 'Counter',
+        component: () =>
+            import ('../views/TestCounter.vue')
+    },
+    {
+        path: '/parent',
+        name: 'Parent',
+        component: () =>
+            import ('../views/Parent.vue')
+    },
+    {
+        path: '/slot',
+        name: 'Slot',
+        component: () =>
+            import ('../views/SlotName.vue')
     }
 ]
 

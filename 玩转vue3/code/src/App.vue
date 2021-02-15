@@ -3,7 +3,8 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>|
     <router-link to="/todoList">TodoList</router-link>|
-    <router-link to="/markRaw">markRaw</router-link>
+    <router-link to="/markRaw">markRaw</router-link>|
+    <router-link to="/parent">parent</router-link>|
   </div>
   <router-view/>
 </template>

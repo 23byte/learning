@@ -20,6 +20,12 @@ const routes = [{
         name: 'todoList',
         component: () =>
             import ('../views/TodoList.vue')
+    },
+    {
+        path: '/markRaw',
+        name: 'markRaw',
+        component: () =>
+            import ('../views/markRaw.vue')
     }
 ]
 

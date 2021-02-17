@@ -88,6 +88,11 @@ const routes = [{
         name: 'toast',
         component: () =>
             import ('../views/TestToast.vue')
+    }, {
+        path: '/current',
+        name: 'current',
+        component: () =>
+            import ('../views/TestRoute.vue')
     }
 
 ]

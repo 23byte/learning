@@ -13,6 +13,7 @@
     <router-link to="/tele">tele</router-link>|
     <router-link to="/async">async</router-link>|
     <router-link to="/toast">toast</router-link>|
+    <router-link to="/current">current</router-link>|
   </div>
   <router-view/>
 </template>

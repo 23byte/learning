@@ -20,7 +20,7 @@ import headl from './Header';
 import foot from './Footer';
 import fbody from './Fbody';
 export default {
-    name:'slotName',
+    name:'slotName', 
     components:{ 
         ht,
         headl,

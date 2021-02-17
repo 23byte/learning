@@ -1,13 +1,13 @@
 <template>
     <div class="slot-name">
         <ht>
-            <template #header>
+            <template #[h1]>
                 <headl></headl>
             </template>
-            <template #body>
+            <template #[b1]>
                 <fbody></fbody>
             </template>
-            <template #footer>
+            <template #[c1]>
                 <foot></foot>
             </template>
         </ht>
@@ -26,6 +26,13 @@ export default {
         headl,
         foot,
         fbody
+    },
+    data(){
+        return{
+            h1:'header',
+            b1:'body',
+            c1:'footer'
+        }
     }
 }
 </script>

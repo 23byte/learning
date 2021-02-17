@@ -12,6 +12,7 @@
     <router-link to="/transition">transition</router-link>|
     <router-link to="/tele">tele</router-link>|
     <router-link to="/async">async</router-link>|
+    <router-link to="/toast">toast</router-link>|
   </div>
   <router-view/>
 </template>

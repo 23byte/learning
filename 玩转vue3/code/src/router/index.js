@@ -83,6 +83,11 @@ const routes = [{
         name: 'async',
         component: () =>
             import ('../views/TestSync.vue')
+    }, {
+        path: '/toast',
+        name: 'toast',
+        component: () =>
+            import ('../views/TestToast.vue')
     }
 
 ]

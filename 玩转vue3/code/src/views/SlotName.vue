@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import ht from './Ht';
+import ht from './Ht'; 
 import headl from './Header';
 import foot from './Footer';
 import fbody from './Fbody';

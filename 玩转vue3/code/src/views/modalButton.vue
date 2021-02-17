@@ -2,7 +2,7 @@
     <div>
         <button @click="modalOpen = true">Open full screen modal!</button>
 
-        <teleport to="body">
+        <teleport to="body" :disabled="true">
             <div v-if="modalOpen" class="modal">
                 <div>
                     I'm a modal!

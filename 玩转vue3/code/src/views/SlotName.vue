@@ -1,13 +1,13 @@
 <template>
     <div class="slot-name">
         <ht>
-            <template v-slot:header>
+            <template #header>
                 <headl></headl>
             </template>
-            <template v-slot:body>
+            <template #body>
                 <fbody></fbody>
             </template>
-            <template v-slot:footer>
+            <template #footer>
                 <foot></foot>
             </template>
         </ht>

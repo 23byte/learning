@@ -44,6 +44,12 @@ const routes = [{
         name: 'Slot',
         component: () =>
             import ('../views/SlotName.vue')
+    },
+    {
+        path: '/parent_v1',
+        name: 'parent_v1',
+        component: () =>
+            import ('../views/parent_v1.vue')
     }
 ]
 

@@ -5,6 +5,7 @@
     <router-link to="/todoList">TodoList</router-link>|
     <router-link to="/markRaw">markRaw</router-link>|
     <router-link to="/parent">parent</router-link>|
+    <router-link to="/parent_v1">parent_v1</router-link>|
   </div>
   <router-view/>
 </template>

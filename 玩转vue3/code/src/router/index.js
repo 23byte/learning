@@ -68,6 +68,11 @@ const routes = [{
         name: 'globalApi',
         component: () =>
             import ('../views/globalApi.vue')
+    }, {
+        path: '/transition',
+        name: 'transition',
+        component: () =>
+            import ('../views/Transition.vue')
     }
 
 ]

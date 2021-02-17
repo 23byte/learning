@@ -7,6 +7,8 @@
     <router-link to="/parent">parent</router-link>|
     <router-link to="/parent_v1">parent_v1</router-link>|
     <router-link to="/drag">Drag</router-link>|
+    <router-link to="/DynamicArguments">DynamicArguments</router-link>|
+    <router-link to="/globalApi">globalApi</router-link>|
   </div>
   <router-view/>
 </template>

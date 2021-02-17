@@ -56,7 +56,20 @@ const routes = [{
         name: 'drag',
         component: () =>
             import ('../views/kDragTest.vue')
+    },
+    {
+        path: '/DynamicArguments',
+        name: 'DynamicArguments',
+        component: () =>
+            import ('../views/DynamicArguments.vue')
+    },
+    {
+        path: '/globalApi',
+        name: 'globalApi',
+        component: () =>
+            import ('../views/globalApi.vue')
     }
+
 ]
 
 const router = createRouter({

@@ -50,6 +50,12 @@ const routes = [{
         name: 'parent_v1',
         component: () =>
             import ('../views/parent_v1.vue')
+    },
+    {
+        path: '/drag',
+        name: 'drag',
+        component: () =>
+            import ('../views/kDragTest.vue')
     }
 ]
 

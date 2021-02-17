@@ -6,6 +6,7 @@
     <router-link to="/markRaw">markRaw</router-link>|
     <router-link to="/parent">parent</router-link>|
     <router-link to="/parent_v1">parent_v1</router-link>|
+    <router-link to="/drag">Drag</router-link>|
   </div>
   <router-view/>
 </template>

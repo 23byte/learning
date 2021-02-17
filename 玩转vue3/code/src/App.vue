@@ -10,6 +10,7 @@
     <router-link to="/DynamicArguments">DynamicArguments</router-link>|
     <router-link to="/globalApi">globalApi</router-link>|
     <router-link to="/transition">transition</router-link>|
+    <router-link to="/tele">tele</router-link>|
   </div>
   <router-view/>
 </template>

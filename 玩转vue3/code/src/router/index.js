@@ -73,6 +73,11 @@ const routes = [{
         name: 'transition',
         component: () =>
             import ('../views/Transition.vue')
+    }, {
+        path: '/tele',
+        name: 'tele',
+        component: () =>
+            import ('../views/tele.vue')
     }
 
 ]

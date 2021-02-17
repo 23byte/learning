@@ -21,7 +21,7 @@ import foot from './Footer';
 import fbody from './Fbody';
 export default {
     name:'slotName',
-    components:{
+    components:{ 
         ht,
         headl,
         foot,

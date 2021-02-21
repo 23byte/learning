@@ -10,7 +10,18 @@ class DataTest extends Controller
 {
     public function index()
     {
-        return'index';
+
+        //$data = Db::table('tp_user')->where('id',127)->findOrEmpty();
+       // $data = Db::table('tp_user')->where('id',27)->find();
+      //  return Db::getLastSql();  //可以得到最近一条SQL查询的原生语句
+//        $data = Db::table('tp_user')->find();
+        //find方法默认查找第一条数据
+        //find方法查询结果不存在 ， 返回null , 否则返回结果数组
+        //return json($data);
+        //$data = Db::name('user')->where('id',20)->value('username');
+        //return $data;
+        $data = Db::name('user')->column('username','id');
+        return json($data);
     }
     public function getNoModelData()
     {
